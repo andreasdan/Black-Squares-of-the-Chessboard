@@ -22,7 +22,6 @@ public class Chessboard
     
     public boolean isBlackSquare(int x, int y)
     {
-        //anything higher than 0 is considered 1
         //1 is subtracted because the board is 0 indexed on both arrays
         return (board[x - 1][y - 1] > 0);
     }

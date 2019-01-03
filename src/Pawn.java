@@ -80,8 +80,8 @@ public class Pawn
             }
 
             savePosition();
-            
             moveCount++;
+            
             System.out.println(moveCount + ". move to (" + xPos + "," + yPos + ")");
         }
     }
