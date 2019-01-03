@@ -20,6 +20,13 @@ public class Chessboard
                             };
     }
     
+    //public boolean isBlackSquare(int x, int y)
+    //{
+    //    //anything higher than 0 is considered 1
+    //    //1 is subtracted because the board is 0 indexed on both arrays
+    //    return (board[x - 1][y - 1] > 0);
+    //}
+    
     public void printBoard(ArrayList<Integer> xPath, ArrayList<Integer> yPath)
     {
         System.out.println("White square: [ ]\nBlack square: [O]\nPawn path: [X]\n");
@@ -62,6 +69,6 @@ public class Chessboard
             System.out.print("\n");
         }
         
-        System.out.println("   1  2  3  4  5  6  7  8");
+        System.out.println("   1  2  3  4  5  6  7  8\n");
     }
 }

@@ -13,7 +13,7 @@ public class ChessboardExercise
         
         //exercise 2
         System.out.println("Exercise 2 test (8,8) with 13 moves:\n");
-        pawn2.findPath(7,8);
+        pawn2.findPath(1,2);
         pawn2.findPath(8,1);
         board.printBoard(pawn2.getXPath(), pawn2.getYPath());
     }

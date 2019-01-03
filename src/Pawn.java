@@ -20,16 +20,6 @@ public class Pawn
         savePosition();
     }
     
-    public int getXPos()
-    {
-        return xPos;
-    }
-    
-    public int getYPos()
-    {
-        return yPos;
-    }
-    
     public ArrayList<Integer> getXPath()
     {
         return xPath;
@@ -40,67 +30,57 @@ public class Pawn
         return yPath;
     }
     
-    private void move(Move move)
-    {
-        switch (move)
-        {
-            case UPPERLEFT:
-                xPos--;
-                yPos++;
-                break;
-            case UPPERRIGHT:
-                xPos++;
-                yPos++;
-                break;
-            case LOWERLEFT:
-                xPos--;
-                yPos--;
-                break;
-            case LOWERRIGHT:
-                xPos++;
-                yPos--;
-                break;
-        }
-        
-        savePosition();
-        
-        //check if pawn is out of bounds
-        if (xPos < 1 || xPos > 8 || yPos < 1 || yPos > 8)
-        {
-            System.out.println("Warning: Pawn moved out of bounds (" + xPos + "," + yPos + ")");
-        }
-    }
-    
     public void findPath(int x, int y)
     {
-        System.out.println("Finding path to (" + x + "," + y + ")");
-        System.out.println("Pawn moved to (" + xPos + "," + yPos + ")");
+        System.out.println("Pawn position (" + xPos + "," + yPos + ")");
         
         while (xPos != x || yPos != y)
         {
-            if (xPos <= x && yPos <= y)
+            if (xPos == 8)
             {
-                move(Move.UPPERRIGHT);
+	            xPos--;
             }
-            else if (xPos <= x && yPos >= y)
+            else if (xPos == 1)
             {
-                move(Move.LOWERRIGHT);
-            }
-            else if (xPos >= x && yPos <= y)
-            {
-                move(Move.UPPERLEFT);
-            }
-            else if (xPos >= x && yPos >= y)
-            {
-                move(Move.LOWERLEFT);
+	            xPos++;
             }
             else
             {
-                System.out.println("WARNING: Pawn stuck not able to calculate next move.");
+	            if (xPos <= x)
+	            {
+		            xPos++;
+	            }
+	            else
+	            {
+		            xPos--;
+	            }	
             }
+
+            if (yPos == 8)
+            {
+	            yPos--;
+            }
+            else if (yPos == 1)
+            {
+	            yPos++;
+            }
+            else
+            {
+	            if (yPos <= y)
+	            {
+		            yPos++;
+	            }
+	            else
+	            {
+		            yPos--;
+	            }	
+            }
+
+            savePosition();
+            System.out.println("Pawn position (" + xPos + "," + yPos + ")");
         }
     }
-    
+        
     private void savePosition()
     {
         xPath.add(xPos);
