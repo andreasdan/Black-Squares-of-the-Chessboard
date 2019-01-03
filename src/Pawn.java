@@ -37,6 +37,7 @@ public class Pawn
         //loops until we have reached to correct square
         while (xPos != x || yPos != y)
         {
+            //determine move on x-axis
             if (xPos == 8)
             {
 	            xPos--;
@@ -56,7 +57,8 @@ public class Pawn
 		            xPos--;
 	            }	
             }
-
+            
+            //determine move on y-axis
             if (yPos == 8)
             {
 	            yPos--;
