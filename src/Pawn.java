@@ -4,6 +4,7 @@ public class Pawn
 {
     private int xPos;
     private int yPos;
+    private int moveCount;
     
     private ArrayList<Integer> xPath;
     private ArrayList<Integer> yPath;
@@ -13,6 +14,7 @@ public class Pawn
         //default start is top right corner (0 indexed)
         xPos = 1;
         yPos = 8;
+        moveCount = 0;
         
         xPath = new ArrayList<Integer>();
         yPath = new ArrayList<Integer>();
@@ -32,8 +34,7 @@ public class Pawn
     
     public void findPath(int x, int y)
     {
-        System.out.println("Pawn position (" + xPos + "," + yPos + ")");
-        
+        //loops until we have reached to correct square
         while (xPos != x || yPos != y)
         {
             if (xPos == 8)
@@ -77,7 +78,9 @@ public class Pawn
             }
 
             savePosition();
-            System.out.println("Pawn position (" + xPos + "," + yPos + ")");
+            
+            moveCount++;
+            System.out.println(moveCount + ". move to (" + xPos + "," + yPos + ")");
         }
     }
         
@@ -85,5 +88,17 @@ public class Pawn
     {
         xPath.add(xPos);
         yPath.add(yPos);
+    }
+    
+    public void reset()
+    {
+        xPos = 1;
+        yPos = 8;
+        moveCount = 0;
+        
+        xPath = new ArrayList<Integer>();
+        yPath = new ArrayList<Integer>();
+        
+        savePosition();
     }
 }
