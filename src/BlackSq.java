@@ -1,4 +1,4 @@
-public class ChessboardExercise
+public class BlackSq
 {    
     public static void main(String[] args)
     {
