@@ -13,3 +13,5 @@ exactly 13 moves reach the lower right corner. I.e. it
 must touch exactly 14 squares.
 It is not allowed for the pawn to enter the same square
 more than once.
+
+Options to test exercises while running the program, are included in a console menu (System.in).
