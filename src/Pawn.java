@@ -11,7 +11,7 @@ public class Pawn
     
     public Pawn()
     {
-        //default start is top right corner (0 indexed)
+        //default start is top right corner
         xPos = 1;
         yPos = 8;
         moveCount = 0;
