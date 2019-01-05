@@ -19,12 +19,15 @@ public class Menu
         boolean runProgram = true;
         while (runProgram)
         {
-            System.out.print("Select one of the following options:\n1. Run exercise 1\n2. Run exercise 2\n3. Exit\nInput>");
+            System.out.print("Select one of the following options:\n0. Show board\n1. Run exercise 1\n2. Run exercise 2\n3. Exit\nInput>");
             
             //read userinput
             char option = scanner.nextLine().charAt(0);
             switch (option)
             {
+                case '0':
+                    board.printBoard();
+                    break;
                 case '1':
                     runExerciseOne();
                     break;

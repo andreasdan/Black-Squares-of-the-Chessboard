@@ -26,6 +26,33 @@ public class Chessboard
         return (board[x - 1][y - 1] > 0);
     }
     
+    public void printBoard()
+    {
+        System.out.println("\nWhite square:\t[ ]\nBlack square:\t[O]\n");
+        
+        for (int i = 7; i >= 0; i--)
+        {
+            System.out.print((i + 1) + " ");
+            
+            for (int j = 0; j < board.length; j++)
+            {                         
+                //anything higher than 0 is considered a 1
+                if (board[i][j] == 0)
+                {
+                    System.out.print("[ ]");
+                }
+                else
+                {
+                    System.out.print("[O]");
+                }
+            }
+            
+            System.out.print("\n");
+        }
+        
+        System.out.println("   1  2  3  4  5  6  7  8\n");
+    }
+    
     public void printBoard(ArrayList<Integer> xPath, ArrayList<Integer> yPath)
     {
         System.out.println("\nWhite square:\t[ ]\nBlack square:\t[O]\nPawn path:\t\t[X]\n");
