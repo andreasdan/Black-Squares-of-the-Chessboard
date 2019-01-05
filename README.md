@@ -1,7 +1,13 @@
 # Black Squares of the Chessboard
 InterRegnum exercise - 'BlackSq'
 
+## Rules
+In this exercise our pawn is limited to move from one black
+square to a neighboring black square.
+
 ## Exercises
+
+![alt text](https://github.com/andreasdan/Black-Squares-of-the-Chessboard/blob/master/docs/Chessboard.png)
 
 - Exercise 1: Write a program, which through a nice print shows a
 way (column and row number) the way our pawn
