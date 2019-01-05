@@ -28,7 +28,7 @@ public class Chessboard
     
     public void printBoard(ArrayList<Integer> xPath, ArrayList<Integer> yPath)
     {
-        System.out.println("\nWhite square: [ ]\nBlack square: [O]\nPawn path: [X]\n");
+        System.out.println("\nWhite square:\t[ ]\nBlack square:\t[O]\nPawn path:\t\t[X]\n");
         
         boolean isPath = false;
                 
